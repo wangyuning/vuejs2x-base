@@ -3,8 +3,17 @@ import App from './App.vue'
 import './registerServiceWorker'
 import router from './router'
 import store from './store'
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+import echarts from 'echarts'
+import RPC from '@/service'
 
 Vue.config.productionTip = false
+
+Vue.use(ElementUI)
+
+Vue.prototype.$RPC = RPC
+Vue.prototype.$Echarts = echarts
 
 new Vue({
   router,
